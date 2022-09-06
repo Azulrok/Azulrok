@@ -9,7 +9,7 @@ Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
 
 <div align="left">
   <a href="https://github.com/Azulrok">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/><br>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
     </div>
   <div align="left">
   <a href="https://github.com/Azulrok">
