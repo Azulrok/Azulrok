@@ -1,12 +1,19 @@
-Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
+                                               <h1>   Olá mundo... eu sou o Edvaldo vugo Azulrok 👋<h1>
 
 
 <center><img width="500" height="180em" align="center" alt="Azul-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></center>
 
 
+
+
+
+
+
 <div align="center">
   <a href="https://github.com/Azulrok">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
+    
+    <br>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=azulrok&layout=compact&langs_count=7&theme=dark"/>
 </div>
   
