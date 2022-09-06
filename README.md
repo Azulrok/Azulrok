@@ -1,5 +1,5 @@
 <div align="center">
-Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
+Olá mundo... eu sou o Edvaldo vulgo Azulrok 👋
 <div>
 
 <div align="center" style="display: inline_block"><br>
@@ -26,7 +26,8 @@ Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
   <img align="center" alt="Azul-unity" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg">
 </div>
 
-<div>
+
+<div><br>
   <a href="https://instagram.com/azulrok" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
  <a href="https://discord.gg/fBEbdnEEXJ" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a> 
   <a href = "mailto:edvaldo1239@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
