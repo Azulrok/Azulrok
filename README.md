@@ -3,11 +3,10 @@ Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
 <div>
 
 <div align="center" style="display: inline_block"><br>
-<img width="500" height="180em" align="" alt="Azul-HTML" height="30" width="40" src=
-            <i class="devicon-github-original"></i>
+            <img width="500" height="180em" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
 <div>
 
-
+<br>
 <div align="left">
   <a href="https://github.com/Azulrok">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
