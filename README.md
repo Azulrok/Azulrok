@@ -1,6 +1,8 @@
 Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
 
 
+<center><img width="500" height="180em" align="center" alt="Azul-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></center>
+
 
 <div align="center">
   <a href="https://github.com/Azulrok">
