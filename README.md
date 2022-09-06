@@ -3,7 +3,8 @@ Olá mundo... eu sou o Edvaldo vugo Azulrok 👋
 <div>
 
 <div align="center" style="display: inline_block"><br>
-<img width="500" height="180em" align="" alt="Azul-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+<img width="500" height="180em" align="" alt="Azul-HTML" height="30" width="40" src=
+            <i class="devicon-github-original"></i>
 <div>
 
 
