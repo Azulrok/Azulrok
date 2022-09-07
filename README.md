@@ -2,11 +2,12 @@
  Olá mundo... eu sou o Edvaldo vulgo Azulrok 👋
 <div>
 
-<div align="center" style="display: inline_block">
-            <img width="300" height="150em" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+<div align="center" style="display: inline_block" >
+            <img width="300" height="150em" color=blue src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
 <div>
 
-
+ 
+ 
 <div align="center">
   <a href="https://github.com/Azulrok">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
