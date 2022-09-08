@@ -15,11 +15,11 @@
  
 <div align="center">
   <a href="https://github.com/Azulrok">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Azulrok&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
 </div>
   <div align="center">
   <a href="https://github.com/Azulrok">
-  <img height="183em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=azulrok&layout=compact&langs_count=7&theme=dark" >
+  <img height="183em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Azulrok&layout=compact&langs_count=7&theme=dark" >
    </div>
   <br>
 <div style="display: inline_block"><br>
