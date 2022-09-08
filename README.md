@@ -16,6 +16,10 @@
   <a href="https://github.com/Azulrok">
   <img height="183em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=azulrok&layout=compact&langs_count=7&theme=dark"/>
 </div>
+
+<div align="left">
+<img align="center" alt="Azul-unity" height="30" width="40" src="https://discord.com/channels/@me/703697508513349702/1017385099026767964">
+</div>
     
   <br>
 <div  style="display: inline_block"><br>
