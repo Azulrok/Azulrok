@@ -5,6 +5,7 @@
 <div align="center" style="display: inline_block" >
             <img width="300" height="150em" color=blue src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
 <div>
+<br>
 
  <div style="display: inline_block">
     <img align="right" alt="azulrok" height="350" style="border-radius:50px;" 
