@@ -1,5 +1,5 @@
 
- ## Olá mundo... eu sou o Edvaldo vulgo Azulrok Aluno de Analise e Desenvolvimento de Sistemas 👋
+ ## Olá mundo... eu sou o Edvaldo vulgo Azulrok Técnico em Informática Aluno de Analise e Desenvolvimento de Sistemas 👋
 
 
 <div align="center" style="display: inline_block" >
