@@ -7,12 +7,12 @@
 <div>
 
 
- 
+ <!--Não copiem meu gif ele e 100% altoral -->
  <div style="display: inline_block">
     <img align="right" alt="azulrok" height="350" style="border-radius:50px;" 
  src="https://media.discordapp.net/attachments/1016684607267155991/1017389374083706921/AvatarEd.gif">
 </div>
- 
+  <!--Não copiem meu gif ele e 100% altoral -->
 
  
 <div align="center">
