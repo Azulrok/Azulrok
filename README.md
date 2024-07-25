@@ -1,5 +1,41 @@
 
  ## Olá mundo... eu sou o Edvaldo vulgo Azulrok sou Técnico em Informática e Aluno de Analise e Desenvolvimento de Sistemas 👋
+<!-- Profile Section -->
+<h1 align="center">
+  <img src="https://img.icons8.com/ios-filled/100/000000/github.png" width="30" height="30"/>
+  Olá, Eu sou [Seu Nome]
+</h1>
+<p align="center">Bem-vindo ao meu perfil GitHub!</p>
+
+<!-- Metallic Card Style using HTML & Markdown -->
+<div align="center" style="background: linear-gradient(145deg, #e6e6e6, #ffffff); box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff; border-radius: 15px; padding: 20px; max-width: 800px; margin: auto;">
+
+### 👨‍💻 Sobre mim
+Sou um desenvolvedor apaixonado por tecnologia e inovação. Adoro explorar novas linguagens e ferramentas para criar soluções criativas e eficientes.
+
+### 🛠️ Tecnologias e Ferramentas
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Angular](https://img.shields.io/badge/-Angular-DD0031?style=flat&logo=angular&logoColor=white)
+![Ionic](https://img.shields.io/badge/-Ionic-3880FF?style=flat&logo=ionic&logoColor=white)
+
+### 🌐 Vamos nos conectar
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/seu-usuario/)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/seu-usuario/)
+
+</div>
+
+<!-- Repositories Section -->
+### 📂 Meus Repositórios
+
+#### Repositórios por Linguagem
+<!-- Replace with your GitHub username -->
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=seu-usuario&layout=compact&theme=radical)
+
+#### Estatísticas do GitHub
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=seu-usuario&show_icons=true&theme=radical)
 
 
 <div align="center" style="display: inline_block" >
