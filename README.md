@@ -1,12 +1,12 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header)
 
 # 💫 Azulrok - Full Stack Developer 💫
-
+ <img align="right" alt="azulrok" height="350" style="border-radius:50px;" src="https://media.discordapp.net/attachments/703697508513349702/1030253608370974801/AvatarEd.gif">
 ![Magic Card](https://img.shields.io/badge/Magic%20Card-Metallic-blueviolet?style=for-the-badge)
 
 <!--Não copiem meu gif ele é 100% autoral -->
 <div style="display: inline_block">
- <img align="right" alt="azulrok" height="350" style="border-radius:50px;" src="https://media.discordapp.net/attachments/703697508513349702/1030253608370974801/AvatarEd.gif">
+
 </div>
 <!--Não copiem meu gif ele é 100% autoral -->
 
@@ -25,7 +25,6 @@
 
 ## ✨ Habilidades
 - Desenvolvedor Full Stack
-- Especialista em Angular e Ionic
 - Foco em Acessibilidade e UX
 
 ---
