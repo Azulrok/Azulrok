@@ -55,6 +55,12 @@ Automações com Shell Script para processos de dados e sistemas simples em Powe
 
 **Salesforce · Power Apps · Git · Mobile · Banco de Dados · Gerência de Projetos**
 
+## Partida
+
+A bola sobe e quebra os dias em que houve commit.
+
+![Pong dos commits](./assets/pong.svg)
+
 ## Contato
 
 [![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-071E26?style=for-the-badge)](https://edvaldodev-e05b2.web.app/)
