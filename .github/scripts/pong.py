@@ -5,7 +5,7 @@ import json
 import os
 import re
 import urllib.request
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 USER = os.environ.get("GITHUB_USER", "Azulrok")
@@ -14,9 +14,9 @@ OUT = Path(os.environ.get("PONG_OUT", Path(__file__).resolve().parents[2] / "ass
 CELL = 11
 GAP = 3
 STEP = CELL + GAP
-LEFT = 64
+LEFT = 20
 TOP = 42
-YEAR_GAP = 14
+COLUMNS = 53
 BALL_R = 5
 PADDLE_W = 78
 PADDLE_H = 8
@@ -72,46 +72,54 @@ def fetch_years(user):
 
 
 def build_board(years):
-    max_weeks = 1
+    by_date = {}
     for _, cells in years:
-        max_weeks = max(max_weeks, max(item[0] for item in cells) + 1)
-    width = LEFT + max_weeks * STEP + 16
-    cursor = TOP
+        for _week, _day, day_date, level in cells:
+            by_date[day_date] = level
+    ordered = sorted(by_date)
+    first = datetime.strptime(ordered[0], "%Y-%m-%d")
+    start = first - timedelta(days=(first.weekday() + 1) % 7)
     bricks = []
     empties = []
-    labels = []
-    for year, cells in years:
-        labels.append((str(year), cursor + (7 * STEP - GAP) / 2 + 4))
-        for week, day, day_date, level in cells:
-            x = LEFT + week * STEP
-            y = cursor + day * STEP
-            if level <= 0:
-                empties.append((x, y))
-            else:
-                bricks.append({
-                    "x": x,
-                    "y": y,
-                    "w": CELL,
-                    "h": CELL,
-                    "level": min(level, 4),
-                    "date": day_date,
-                    "alive": True,
-                    "hit": None,
-                })
-        cursor += 7 * STEP + YEAR_GAP
-    grid_bottom = cursor - YEAR_GAP - GAP
+    max_band = 0
+    for day_date in ordered:
+        current = datetime.strptime(day_date, "%Y-%m-%d")
+        delta = (current - start).days
+        week = delta // 7
+        row = delta % 7
+        band = week // COLUMNS
+        col = week % COLUMNS
+        max_band = max(max_band, band)
+        x = LEFT + col * STEP
+        y = TOP + band * (7 * STEP) + row * STEP
+        if by_date[day_date] <= 0:
+            empties.append((x, y))
+        else:
+            bricks.append({
+                "x": x,
+                "y": y,
+                "w": CELL,
+                "h": CELL,
+                "level": min(by_date[day_date], 4),
+                "date": day_date,
+                "alive": True,
+                "hit": None,
+            })
+    grid_bottom = TOP + (max_band + 1) * (7 * STEP) - GAP
     paddle_y = grid_bottom + 16
+    width = LEFT + COLUMNS * STEP + 16
     height = paddle_y + PADDLE_H + 18
     return {
         "width": width,
         "height": height,
         "left": LEFT,
-        "right": LEFT + max_weeks * STEP - GAP,
+        "right": LEFT + COLUMNS * STEP - GAP,
         "top": TOP - 8,
         "paddle_y": paddle_y,
         "bricks": bricks,
         "empties": empties,
-        "labels": labels,
+        "labels": [],
+        "span": "{0}–{1}".format(ordered[0][:4], ordered[-1][:4]),
     }
 
 
@@ -271,8 +279,8 @@ def render(board, frames):
         )
     )
     add(
-        '<text x="{x}" y="26" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">commits de todos os anos</text>'.format(
-            x=LEFT + 58
+        '<text x="{x}" y="26" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">{span}</text>'.format(
+            x=LEFT + 58, span=board["span"]
         )
     )
     for label, y in board["labels"]:
