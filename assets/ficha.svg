@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="900" viewBox="0 0 1080 900" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Ficha de personagem de Edvaldo Júnior</title>
+  <desc id="descricao">Desenvolvedor Pleno Full Stack na SONDA, Rio de Janeiro. Formado em Análise e Desenvolvimento de Sistemas pela UNISUAM. Pós em Arquitetura Java pela FIAP em curso.</desc>
+  <defs>
+    <clipPath id="xp">
+      <rect x="96" y="842" width="888" height="14" rx="7"/>
+    </clipPath>
+  </defs>
+  <rect width="1080" height="900" fill="#04161B"/>
+  <rect x="14" y="14" width="1052" height="872" rx="18" fill="#071E26" stroke="#E4C27A" stroke-width="2"/>
+  <rect x="24" y="24" width="1032" height="852" rx="12" fill="none" stroke="#E4C27A" stroke-opacity="0.35"/>
+  <path d="M40 46 H78 M40 46 V84" fill="none" stroke="#E4C27A" stroke-width="2"/>
+  <path d="M1040 46 H1002 M1040 46 V84" fill="none" stroke="#E4C27A" stroke-width="2"/>
+  <path d="M40 854 H78 M40 854 V816" fill="none" stroke="#E4C27A" stroke-width="2"/>
+  <path d="M1040 854 H1002 M1040 854 V816" fill="none" stroke="#E4C27A" stroke-width="2"/>
+  <text x="48" y="72" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="3.2">FICHA DE PERSONAGEM</text>
+  <text x="48" y="118" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="42" font-weight="700">Edvaldo Júnior</text>
+  <text x="48" y="148" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15">Edvaldo Batista de Albuquerque Júnior</text>
+  <text x="48" y="182" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Classe</text>
+  <text x="108" y="182" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Desenvolvedor Pleno Full Stack</text>
+  <text x="48" y="208" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Origem</text>
+  <text x="112" y="208" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Rio de Janeiro, RJ</text>
+  <text x="300" y="208" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Desde</text>
+  <text x="356" y="208" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">2019</text>
+  <path d="M940 48 C1010 48 1028 86 1028 118 L1028 140 C1028 186 984 210 940 226 C896 210 852 186 852 140 L852 118 C852 86 870 48 940 48 Z" fill="#0C2C34" stroke="#E4C27A" stroke-width="2"/>
+  <text x="940" y="128" text-anchor="middle" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">PLENO</text>
+  <text x="940" y="152" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.4">FULL STACK</text>
+  <rect x="48" y="232" width="180" height="84" rx="10" fill="#0C2C34" stroke="#1F5560"/>
+  <text x="138" y="274" text-anchor="middle" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="700">7</text>
+  <text x="138" y="298" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.3">ANOS DE DEV</text>
+  <rect x="250" y="232" width="180" height="84" rx="10" fill="#0C2C34" stroke="#1F5560"/>
+  <text x="340" y="274" text-anchor="middle" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="700">8</text>
+  <text x="340" y="298" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.3">PROJETOS</text>
+  <rect x="452" y="232" width="180" height="84" rx="10" fill="#0C2C34" stroke="#1F5560"/>
+  <text x="542" y="274" text-anchor="middle" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="700">5</text>
+  <text x="542" y="298" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.3">CURSOS</text>
+  <text x="48" y="352" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2.4">ATRIBUTOS</text>
+  <rect x="48" y="366" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="48" y="366" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="125" y="396" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Java</text>
+  <text x="125" y="414" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">linguagem</text>
+  <rect x="214" y="366" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="214" y="366" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="291" y="396" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Spring</text>
+  <text x="291" y="414" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">framework</text>
+  <rect x="380" y="366" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="380" y="366" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="457" y="396" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">JavaScript</text>
+  <text x="457" y="414" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">linguagem</text>
+  <rect x="546" y="366" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="546" y="366" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="623" y="396" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">SQL</text>
+  <text x="623" y="414" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">dados</text>
+  <rect x="712" y="366" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="712" y="366" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="789" y="396" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Shell Script</text>
+  <text x="789" y="414" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">automação</text>
+  <rect x="878" y="366" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="878" y="366" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="955" y="396" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">HTML / CSS</text>
+  <text x="955" y="414" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">interface</text>
+  <rect x="48" y="442" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="48" y="442" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="125" y="472" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Salesforce</text>
+  <text x="125" y="490" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">plataforma</text>
+  <rect x="214" y="442" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="214" y="442" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="291" y="472" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Power Apps</text>
+  <text x="291" y="490" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">automação</text>
+  <rect x="380" y="442" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="380" y="442" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="457" y="472" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Git</text>
+  <text x="457" y="490" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">versão</text>
+  <rect x="546" y="442" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="546" y="442" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="623" y="472" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Mobile</text>
+  <text x="623" y="490" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">apps</text>
+  <rect x="712" y="442" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="712" y="442" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="789" y="472" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Banco de Dados</text>
+  <text x="789" y="490" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">dados</text>
+  <rect x="878" y="442" width="154" height="64" rx="8" fill="#0C2C34" stroke="#1F5560"/>
+  <rect x="878" y="442" width="154" height="3" rx="1" fill="#E4C27A"/>
+  <text x="955" y="472" text-anchor="middle" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Gerência</text>
+  <text x="955" y="490" text-anchor="middle" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">projetos</text>
+  <rect x="40" y="530" width="500" height="236" rx="12" fill="#0A242C" stroke="#1F5560"/>
+  <rect x="552" y="530" width="488" height="236" rx="12" fill="#0A242C" stroke="#1F5560"/>
+  <text x="56" y="556" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2.4">CAMPANHA</text>
+  <text x="568" y="556" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2.4">INVENTÁRIO</text>
+  <line x1="70" y1="580" x2="70" y2="708" stroke="#E4C27A" stroke-opacity="0.45"/>
+  <circle cx="70" cy="580" r="4" fill="#E4C27A"/>
+  <text x="88" y="584" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">2025 — Atual</text>
+  <text x="88" y="604" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Desenvolvedor Pleno · SONDA</text>
+  <text x="88" y="622" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">Manutenção, suporte e evolução da plataforma.</text>
+  <circle cx="70" cy="644" r="4" fill="#E4C27A"/>
+  <text x="88" y="648" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">2024 — 2025</text>
+  <text x="88" y="668" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Desenvolvedor Júnior · SONDA</text>
+  <text x="88" y="686" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">Sustentação Salesforce e suporte técnico.</text>
+  <circle cx="70" cy="708" r="4" fill="#E4C27A"/>
+  <text x="88" y="712" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">2022 — 2024</text>
+  <text x="88" y="732" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Estagiário de Desenvolvimento · SONDA</text>
+  <text x="88" y="750" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">Automações em Shell Script e Power Apps.</text>
+  <rect x="568" y="574" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="598" y="584" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Poupe Fácil</text>
+  <text x="598" y="600" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Mobile · finanças</text>
+  <rect x="804" y="574" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="834" y="584" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Mapa de Serviço</text>
+  <text x="834" y="600" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Mobile · Fiocruz</text>
+  <rect x="568" y="620" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="598" y="630" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">STOC</text>
+  <text x="598" y="646" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Java · Spring · MySQL</text>
+  <rect x="804" y="620" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="834" y="630" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">A Fantastic Adventure</text>
+  <text x="834" y="646" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Jogo · Android</text>
+  <rect x="568" y="666" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="598" y="676" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">PlayPicker</text>
+  <text x="598" y="692" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Web · jogos</text>
+  <rect x="804" y="666" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="834" y="676" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Larissa Estevão</text>
+  <text x="834" y="692" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Site · contabilidade</text>
+  <rect x="568" y="712" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="598" y="722" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Equaliza</text>
+  <text x="598" y="738" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">Web · áudio</text>
+  <rect x="804" y="712" width="22" height="22" rx="4" fill="none" stroke="#E4C27A"/>
+  <text x="834" y="722" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">ArenaFit</text>
+  <text x="834" y="738" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11">React · Firebase</text>
+  <text x="48" y="802" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.6">TRILHA</text>
+  <text x="118" y="802" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">FAETEC 2022  ·  UNISUAM 2024  ·  FIAP 2026</text>
+  <text x="48" y="828" fill="#E4C27A" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.4">QUEST ATIVA</text>
+  <text x="160" y="828" fill="#F6F3EA" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Arquitetura e Desenvolvimento Java · FIAP · em curso</text>
+  <rect x="96" y="842" width="888" height="14" rx="7" fill="#12343C"/>
+  <rect x="96" y="842" width="560" height="14" fill="#E4C27A" clip-path="url(#xp)"/>
+</svg>
