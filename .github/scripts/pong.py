@@ -5,7 +5,7 @@ import json
 import os
 import re
 import urllib.request
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from pathlib import Path
 
 USER = os.environ.get("GITHUB_USER", "Azulrok")
@@ -76,41 +76,42 @@ def build_board(years):
         for _week, _day, day_date, level in cells:
             by_date[day_date] = level
     ordered = sorted(by_date)
-    first = datetime.strptime(ordered[0], "%Y-%m-%d")
-    start = first - timedelta(days=(first.weekday() + 1) % 7)
+    merged = {}
+    for day_date, level in by_date.items():
+        current = datetime.strptime(day_date, "%Y-%m-%d")
+        week = int(current.strftime("%U"))
+        row = (current.weekday() + 1) % 7
+        merged[(week, row)] = merged.get((week, row), 0) + level
+    weeks = 54
     bricks = []
     empties = []
-    max_week = 0
-    for day_date in ordered:
-        current = datetime.strptime(day_date, "%Y-%m-%d")
-        delta = (current - start).days
-        week = delta // 7
-        row = delta % 7
-        max_week = max(max_week, week)
-        x = LEFT + week * STEP
-        y = TOP + row * STEP
-        if by_date[day_date] <= 0:
-            empties.append((x, y))
-        else:
-            bricks.append({
-                "x": x,
-                "y": y,
-                "w": CELL,
-                "h": CELL,
-                "level": min(by_date[day_date], 4),
-                "date": day_date,
-                "alive": True,
-                "hit": None,
-            })
+    for week in range(weeks):
+        for row in range(7):
+            level = min(4, merged.get((week, row), 0))
+            x = LEFT + week * STEP
+            y = TOP + row * STEP
+            if level <= 0:
+                empties.append((x, y))
+            else:
+                bricks.append({
+                    "x": x,
+                    "y": y,
+                    "w": CELL,
+                    "h": CELL,
+                    "level": level,
+                    "date": "{0}-W{1}-D{2}".format(ordered[0][:4], week, row),
+                    "alive": True,
+                    "hit": None,
+                })
     grid_bottom = TOP + 7 * STEP - GAP
     paddle_y = grid_bottom + 16
-    width = LEFT + (max_week + 1) * STEP + 16
+    width = LEFT + weeks * STEP + 16
     height = paddle_y + PADDLE_H + 18
     return {
         "width": width,
         "height": height,
         "left": LEFT,
-        "right": LEFT + (max_week + 1) * STEP - GAP,
+        "right": LEFT + weeks * STEP - GAP,
         "top": TOP - 8,
         "paddle_y": paddle_y,
         "bricks": bricks,
