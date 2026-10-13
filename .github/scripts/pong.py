@@ -16,7 +16,6 @@ GAP = 3
 STEP = CELL + GAP
 LEFT = 20
 TOP = 42
-COLUMNS = 53
 BALL_R = 5
 PADDLE_W = 78
 PADDLE_H = 8
@@ -81,17 +80,15 @@ def build_board(years):
     start = first - timedelta(days=(first.weekday() + 1) % 7)
     bricks = []
     empties = []
-    max_band = 0
+    max_week = 0
     for day_date in ordered:
         current = datetime.strptime(day_date, "%Y-%m-%d")
         delta = (current - start).days
         week = delta // 7
         row = delta % 7
-        band = week // COLUMNS
-        col = week % COLUMNS
-        max_band = max(max_band, band)
-        x = LEFT + col * STEP
-        y = TOP + band * (7 * STEP) + row * STEP
+        max_week = max(max_week, week)
+        x = LEFT + week * STEP
+        y = TOP + row * STEP
         if by_date[day_date] <= 0:
             empties.append((x, y))
         else:
@@ -105,15 +102,15 @@ def build_board(years):
                 "alive": True,
                 "hit": None,
             })
-    grid_bottom = TOP + (max_band + 1) * (7 * STEP) - GAP
+    grid_bottom = TOP + 7 * STEP - GAP
     paddle_y = grid_bottom + 16
-    width = LEFT + COLUMNS * STEP + 16
+    width = LEFT + (max_week + 1) * STEP + 16
     height = paddle_y + PADDLE_H + 18
     return {
         "width": width,
         "height": height,
         "left": LEFT,
-        "right": LEFT + COLUMNS * STEP - GAP,
+        "right": LEFT + (max_week + 1) * STEP - GAP,
         "top": TOP - 8,
         "paddle_y": paddle_y,
         "bricks": bricks,
@@ -131,10 +128,7 @@ def aim(ball_x, ball_y, bricks, upward):
             continue
         cx = brick["x"] + brick["w"] / 2
         cy = brick["y"] + brick["h"] / 2
-        if upward:
-            key = (cy, abs(cx - ball_x))
-        else:
-            key = (-cy, abs(cx - ball_x))
+        key = (abs(cx - ball_x), abs(cy - ball_y))
         if best_key is None or key < best_key:
             best = cx
             best_key = key
@@ -149,8 +143,8 @@ def simulate(board):
     paddle_y = board["paddle_y"]
     ball_x = (board["left"] + board["right"]) / 2
     ball_y = paddle_y - 24
-    vx = 180.0
-    vy = -340.0
+    vx = 280.0
+    vy = -260.0
     paddle_x = ball_x - PADDLE_W / 2
     frames = []
     dt = 1.0 / FPS
@@ -164,7 +158,7 @@ def simulate(board):
         frame += 1
         for _ in range(substeps):
             target = ball_x - PADDLE_W / 2
-            max_move = 360 * sub_dt
+            max_move = 700 * sub_dt
             if paddle_x < target:
                 paddle_x = min(target, paddle_x + max_move)
             else:
@@ -175,7 +169,7 @@ def simulate(board):
 
             target_x = aim(ball_x, ball_y, bricks, vy < 0)
             if target_x is not None:
-                desired = max(-320.0, min(320.0, (target_x - ball_x) * 6))
+                desired = max(-640.0, min(640.0, (target_x - ball_x) * 8))
                 vx += (desired - vx) * 0.65
             elif target_x is None and abs(vx) < 90:
                 vx = 160.0 if vx >= 0 else -160.0
@@ -336,7 +330,7 @@ def main():
     svg = render(board, frames)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(svg, encoding="utf-8", newline="\n")
-    print("tijolos", len(board["bricks"]), "acertos", hits, "arquivo", OUT)
+    print("tijolos", len(board["bricks"]), "acertos", hits, "largura", board["width"], "altura", board["height"])
 
 
 if __name__ == "__main__":
