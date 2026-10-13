@@ -1,6 +1,6 @@
 <img src="./assets/ficha.svg" alt="Ficha de personagem de Edvaldo Júnior, desenvolvedor pleno full stack na SONDA, Rio de Janeiro." width="100%">
 
-Sou Edvaldo Batista de Albuquerque Júnior, desenvolvedor pleno full stack no Rio de Janeiro, desenvolvendo desde 2019, no freelance e na SONDA. Técnico em Desenvolvimento de Software pela FAETEC, formado em Análise e Desenvolvimento de Sistemas pela UNISUAM e, desde 2026, na pós em Arquitetura e Desenvolvimento Java pela FIAP. A ficha acima é o retrato. Os links estão no [portfólio](https://edvaldodev-e05b2.web.app/).
+Sou desenvolvedor pleno full stack no Rio de Janeiro, desenvolvendo desde 2019, no freelance e na SONDA. Técnico em Desenvolvimento de Software pela FAETEC, formado em Análise e Desenvolvimento de Sistemas pela UNISUAM e, desde 2026, na pós em Arquitetura e Desenvolvimento Java pela FIAP. A ficha acima é o retrato. Os links estão no [portfólio](https://edvaldodev-e05b2.web.app/).
 
 ## Campanha
 
