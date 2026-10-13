@@ -57,7 +57,7 @@ Automações com Shell Script para processos de dados e sistemas simples em Powe
 
 ## Partida
 
-A bola sobe e quebra os dias em que houve commit.
+A bola sobe e quebra os commits de todos os anos.
 
 ![Pong dos commits](./assets/pong.svg)
 

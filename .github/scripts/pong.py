@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """Gera um Pong em SVG. Cada dia com commit vira um tijolo."""
 
+import json
 import os
 import re
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 USER = os.environ.get("GITHUB_USER", "Azulrok")
@@ -12,8 +14,9 @@ OUT = Path(os.environ.get("PONG_OUT", Path(__file__).resolve().parents[2] / "ass
 CELL = 11
 GAP = 3
 STEP = CELL + GAP
-LEFT = 20
+LEFT = 64
 TOP = 42
+YEAR_GAP = 14
 BALL_R = 5
 PADDLE_W = 78
 PADDLE_H = 8
@@ -28,74 +31,105 @@ COLORS = {
 }
 
 
-def fetch_days(user):
-    url = "https://github.com/users/{0}/contributions".format(user)
+DAY_PATTERN = re.compile(
+    r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*'
+    r'id="contribution-day-component-(\d+)-(\d+)"[^>]*'
+    r'data-level="(\d)"'
+)
+
+
+def fetch_html(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Azulrok-pong"})
-    html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
-    pattern = re.compile(
-        r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*'
-        r'id="contribution-day-component-(\d+)-(\d+)"[^>]*'
-        r'data-level="(\d)"'
+    return urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+
+
+def account_start(user):
+    url = "https://api.github.com/users/{0}".format(user)
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Azulrok-pong", "Accept": "application/vnd.github+json"},
     )
-    cells = []
-    for date, row, col, level in pattern.findall(html):
-        cells.append((int(col), int(row), date, int(level)))
-    if not cells:
+    payload = json.loads(urllib.request.urlopen(req, timeout=30).read().decode("utf-8"))
+    return int(payload["created_at"][:4])
+
+
+def fetch_years(user):
+    start = account_start(user)
+    end = date.today().year
+    years = []
+    for year in range(start, end + 1):
+        url = "https://github.com/users/{0}/contributions?from={1}-01-01&to={1}-12-31".format(user, year)
+        cells = []
+        for day, row, col, level in DAY_PATTERN.findall(fetch_html(url)):
+            if not day.startswith(str(year)):
+                continue
+            cells.append((int(col), int(row), day, int(level)))
+        if cells:
+            years.append((year, cells))
+    if not years:
         raise SystemExit("calendario de contribuicoes vazio")
-    return cells
+    return years
 
 
-def build_board(cells):
-    weeks = max(item[0] for item in cells) + 1
-    width = LEFT * 2 + weeks * STEP - GAP
-    grid_bottom = TOP + 7 * STEP - GAP
-    paddle_y = grid_bottom + 16
-    height = paddle_y + PADDLE_H + 18
+def build_board(years):
+    max_weeks = 1
+    for _, cells in years:
+        max_weeks = max(max_weeks, max(item[0] for item in cells) + 1)
+    width = LEFT + max_weeks * STEP + 16
+    cursor = TOP
     bricks = []
     empties = []
-    for week, day, date, level in cells:
-        x = LEFT + week * STEP
-        y = TOP + day * STEP
-        if level <= 0:
-            empties.append((x, y))
-        else:
-            bricks.append({
-                "x": x,
-                "y": y,
-                "w": CELL,
-                "h": CELL,
-                "level": min(level, 4),
-                "date": date,
-                "alive": True,
-                "hit": None,
-            })
+    labels = []
+    for year, cells in years:
+        labels.append((str(year), cursor + (7 * STEP - GAP) / 2 + 4))
+        for week, day, day_date, level in cells:
+            x = LEFT + week * STEP
+            y = cursor + day * STEP
+            if level <= 0:
+                empties.append((x, y))
+            else:
+                bricks.append({
+                    "x": x,
+                    "y": y,
+                    "w": CELL,
+                    "h": CELL,
+                    "level": min(level, 4),
+                    "date": day_date,
+                    "alive": True,
+                    "hit": None,
+                })
+        cursor += 7 * STEP + YEAR_GAP
+    grid_bottom = cursor - YEAR_GAP - GAP
+    paddle_y = grid_bottom + 16
+    height = paddle_y + PADDLE_H + 18
     return {
         "width": width,
         "height": height,
-        "weeks": weeks,
         "left": LEFT,
-        "right": LEFT + weeks * STEP - GAP,
+        "right": LEFT + max_weeks * STEP - GAP,
         "top": TOP - 8,
         "paddle_y": paddle_y,
         "bricks": bricks,
         "empties": empties,
+        "labels": labels,
     }
 
 
-def aim(ball_x, ball_y, bricks):
+def aim(ball_x, ball_y, bricks, upward):
     best = None
-    best_d = None
+    best_key = None
     for brick in bricks:
         if not brick["alive"]:
             continue
         cx = brick["x"] + brick["w"] / 2
         cy = brick["y"] + brick["h"] / 2
-        dx = cx - ball_x
-        dy = cy - ball_y
-        dist = dx * dx + dy * dy
-        if best_d is None or dist < best_d:
+        if upward:
+            key = (cy, abs(cx - ball_x))
+        else:
+            key = (-cy, abs(cx - ball_x))
+        if best_key is None or key < best_key:
             best = cx
-            best_d = dist
+            best_key = key
     return best
 
 
@@ -107,20 +141,22 @@ def simulate(board):
     paddle_y = board["paddle_y"]
     ball_x = (board["left"] + board["right"]) / 2
     ball_y = paddle_y - 24
-    vx = 160.0
-    vy = -220.0
+    vx = 180.0
+    vy = -340.0
     paddle_x = ball_x - PADDLE_W / 2
     frames = []
-    steps = int(DURATION * FPS)
     dt = 1.0 / FPS
-    substeps = 2
+    substeps = 3
     sub_dt = dt / substeps
+    limit = 180.0
+    frame = 0
 
-    for frame in range(steps):
+    while frame < int(limit * FPS):
         t = frame * dt
+        frame += 1
         for _ in range(substeps):
             target = ball_x - PADDLE_W / 2
-            max_move = 220 * sub_dt
+            max_move = 360 * sub_dt
             if paddle_x < target:
                 paddle_x = min(target, paddle_x + max_move)
             else:
@@ -129,10 +165,10 @@ def simulate(board):
             max_px = board["right"] - PADDLE_W
             paddle_x = max(min_px, min(max_px, paddle_x))
 
-            target_x = aim(ball_x, ball_y, bricks)
-            if vy < 0 and target_x is not None:
-                desired = max(-260.0, min(260.0, (target_x - ball_x) * 4))
-                vx += (desired - vx) * 0.35
+            target_x = aim(ball_x, ball_y, bricks, vy < 0)
+            if target_x is not None:
+                desired = max(-320.0, min(320.0, (target_x - ball_x) * 6))
+                vx += (desired - vx) * 0.65
             elif target_x is None and abs(vx) < 90:
                 vx = 160.0 if vx >= 0 else -160.0
 
@@ -154,7 +190,7 @@ def simulate(board):
                     ball_y = paddle_y - BALL_R
                     offset = (ball_x - (paddle_x + PADDLE_W / 2)) / (PADDLE_W / 2)
                     vx = offset * 240
-                    vy = -max(170.0, abs(vy))
+                    vy = -max(260.0, abs(vy))
 
             hit = None
             hit_dist = None
@@ -174,8 +210,13 @@ def simulate(board):
                 hit["hit"] = t
                 cx = min(max(ball_x, hit["x"]), hit["x"] + hit["w"])
                 cy = min(max(ball_y, hit["y"]), hit["y"] + hit["h"])
+                bricks_above = any(
+                    brick["alive"] and brick["y"] + brick["h"] < ball_y for brick in bricks
+                )
                 if abs(ball_x - cx) > abs(ball_y - cy):
                     vx = -vx
+                elif vy < 0 and bricks_above:
+                    ball_y -= BALL_R
                 else:
                     vy = -vy
                 ball_x += vx * sub_dt
@@ -188,6 +229,8 @@ def simulate(board):
                 vy = -210.0
 
         frames.append((round(ball_x, 1), round(ball_y, 1), round(paddle_x, 1)))
+        if t > 6 and not any(brick["alive"] for brick in bricks):
+            break
     return frames
 
 
@@ -228,10 +271,16 @@ def render(board, frames):
         )
     )
     add(
-        '<text x="{x}" y="26" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">commits viram tijolos</text>'.format(
+        '<text x="{x}" y="26" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">commits de todos os anos</text>'.format(
             x=LEFT + 58
         )
     )
+    for label, y in board["labels"]:
+        add(
+            '<text x="16" y="{y}" fill="#8FB4B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">{label}</text>'.format(
+                y=int(y), label=label
+            )
+        )
     for x, y in board["empties"]:
         add(
             '<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="2" fill="#0C2C34"/>'.format(
@@ -270,9 +319,11 @@ def render(board, frames):
 
 
 def main():
-    cells = fetch_days(USER)
-    board = build_board(cells)
+    global DURATION
+    years = fetch_years(USER)
+    board = build_board(years)
     frames = simulate(board)
+    DURATION = max(8.0, len(frames) / FPS)
     hits = sum(1 for brick in board["bricks"] if brick["hit"] is not None)
     svg = render(board, frames)
     OUT.parent.mkdir(parents=True, exist_ok=True)
