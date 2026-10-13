@@ -1,38 +1,66 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header)
+<img src="./assets/ficha.svg" alt="Ficha de personagem de Edvaldo Júnior, desenvolvedor pleno full stack na SONDA, Rio de Janeiro." width="100%">
 
-# 💫 Azulrok - Full Stack Developer 💫
+Sou Edvaldo Batista de Albuquerque Júnior, desenvolvedor pleno full stack no Rio de Janeiro. Técnico em Desenvolvimento de Software pela FAETEC, formado em Análise e Desenvolvimento de Sistemas pela UNISUAM e, desde 2026, na pós em Arquitetura e Desenvolvimento Java pela FIAP. A ficha acima é o retrato. Os links estão no [portfólio](https://edvaldodev-e05b2.web.app/).
 
+## Campanha
 
+**2025 — atual · Desenvolvedor de Software Pleno · SONDA**
+Sustentação Salesforce: manutenção, funcionalidades novas, suporte técnico e evolução da plataforma.
 
-<!--Não copiem meu gif ele é 100% autoral -->
-<div style="display: inline_block">
- <img align="right" alt="azulrok" height="350" style="border-radius:50px;" src="https://media.discordapp.net/attachments/703697508513349702/1030253608370974801/AvatarEd.gif">
-</div>
-<!--Não copiem meu gif ele é 100% autoral -->
+**2024 — 2025 · Desenvolvedor de Software Júnior · SONDA**
+A mesma frente, em sustentação: manutenção, funcionalidades e suporte.
 
----
+**2022 — 2024 · Estagiário de Desenvolvimento · SONDA**
+Automações com Shell Script para processos de dados e sistemas simples em Power Apps.
 
-## 🌟 Repositórios
-### 🛠️ Linguagens e Ferramentas
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
-![Ionic](https://img.shields.io/badge/Ionic-%234285F4.svg?style=for-the-badge&logo=ionic&logoColor=white)
+## Inventário
 
----
+| Projeto | O que faz |
+| --- | --- |
+| [Poupe Fácil](https://play.google.com/store/apps/details?id=com.poupefacil.app) | App móvel híbrido para registrar gastos, acompanhar saldo e achar onde economizar. |
+| Mapa de Serviço | Informações dos serviços da Fiocruz, com localização e feedback. |
+| [STOC](https://github.com/Azulrok/Stoc_V2) | Estoque em Java, Spring e MySQL: produtos, movimentação e fornecedores. |
+| [A Fantastic Adventure](https://play.google.com/store/apps/details?id=com.twoblocks.studios) | Jogo de aventura para Android: correr, pular, desviar e desbloquear um poder. |
+| [PlayPicker](https://play-picker.netlify.app) | Site para escolher o próximo jogo. |
+| [Larissa Estevão Contabilidade](https://larissa-estevao-contadora.netlify.app/) | Site da contadora, com serviços, contato e WhatsApp. |
+| [Equaliza](https://equaliza-29eca.web.app/) | Guia de equalização para técnicos de PA, igreja, estúdio e passagem de som. |
+| ArenaFit | App web de treinos, pontos e comunidade, em React e Firebase. |
 
-## ✨ Habilidades
-- Desenvolvedor Full Stack
-- Foco em Acessibilidade e UX
+## Trilha
 
----
+| Ano | Formação |
+| --- | --- |
+| 2026 — cursando | Pós-graduação em Arquitetura e Desenvolvimento Java · FIAP |
+| 2024 | Análise e Desenvolvimento de Sistemas · UNISUAM |
+| 2022 | Desenvolvimento de Software · FAETEC ETE Juscelino Kubitschek |
+| 2020 | Técnicas Administrativas · Instituto Brasileiro de Aprendizagem |
 
-## 📊 Estatísticas do GitHub
-![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=Azulrok&show_icons=true&theme=radical)
-![Linguagens Mais Usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=Azulrok&layout=compact&theme=radical)
+<details>
+<summary>Cursos</summary>
+<br>
 
----
+| Curso | Quando |
+| --- | --- |
+| Infraestrutura e Arquiteturas para Suporte às Aplicações | 2024 · 340h |
+| Desenvolvimento de Aplicativos Mobile | 2024 · 340h |
+| Desenvolvimento de Software para Internet (Back-End) | 2023 · 340h |
+| Desenvolvimento de Software para Internet (Front-End) | 2023 · 340h |
+| Qualificação em Gerência de Projetos de Software | 2022 · 340h |
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer)
+</details>
+
+## Atributos
+
+**Java · Spring · JavaScript · HTML · CSS · Shell Script · SQL**
+
+**Salesforce · Power Apps · Git · Mobile · Banco de Dados · Gerência de Projetos**
+
+## Contato
+
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-071E26?style=for-the-badge)](https://edvaldodev-e05b2.web.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-071E26?style=for-the-badge&logo=linkedin&logoColor=E4C27A)](https://www.linkedin.com/in/edvaldo-batista-junior/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-071E26?style=for-the-badge&logo=whatsapp&logoColor=E4C27A)](https://wa.me/5521990435855)
+
+edvaldojunior.desenvolvedor@gmail.com
+
+<sub>Rio de Janeiro · ficha de personagem · 2026</sub>
